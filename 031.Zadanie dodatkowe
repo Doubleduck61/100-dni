@@ -1,0 +1,23 @@
+numbers1 = [1,3,6,12,1,23,43,12,11]
+numbers2 = [1,3,6,12,1,23,63,12,12]
+numbers3 = [991,3,6,12,1,23,83,12,13]
+numbers=[numbers1,numbers2,numbers3]
+
+def summary(numbers):
+    together = sum(numbers)
+    length = len(numbers)
+    avg = together / length
+    return avg
+
+def maximum(numbers):
+    x=max(numbers)
+    return x
+
+def printavg(avg,x):
+    print(f"Max liczba to: {x}")
+    print(f"Srednia liczba to: {avg:.4f}")
+
+for i in numbers:
+    avg = summary(i)
+    x = maximum(i)
+    printavg(avg,x)
