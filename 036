@@ -1,0 +1,13 @@
+def exercise():
+	print(nr,"-",ex,"- Task",task[ex-1])
+	
+task=["A","B","C","D","E"]
+nr=0
+for i in range(0,3):
+	ex=0
+	nr+=1
+	for x in range(0,5):
+		ex+=1
+		list=[1,2,3,4,5]
+		if ex == list[ex-1]:
+			exercise()
