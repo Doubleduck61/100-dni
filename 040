@@ -1,0 +1,6 @@
+nums = [3,5,1,10,6,8]
+
+def min_max(nums):
+    return min(nums), max(nums)
+
+print(f"Minimalna i maxymalna wartość to {min_max(nums)}")
