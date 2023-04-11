@@ -1,7 +1,7 @@
-lista=(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,)
-x=0
+lista=(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15)
+suma=0
 for i in lista:
     if not lista[i-1] % 2:
-        x=x+lista[i-1]
+        suma+=lista[i-1]
 
-print(x)
+print(suma)
