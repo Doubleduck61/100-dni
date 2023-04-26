@@ -1,0 +1,45 @@
+#Stwórz program, który będzie przechowywał słownik z nazwami państw i ich stolicami.
+#Następnie poproś użytkownika o podanie nazwy państwa, a program ma wyświetlić stolicę tego państwa.
+#Jeśli użytkownik poda nazwę państwa, której nie ma w słowniku, program powinien wyświetlić komunikat o błędzie.
+
+import os
+
+def check_country(country, capitols):
+    if country in capitols:
+        print("Capitol of",country," is",capitols[country])
+    else:
+        print("Sorry, we don't have this country in our data base!")
+
+def exit():
+    global loop
+    ok = True
+    while ok == True:
+        exit=input("Do you want to exit? [Y/N] ")
+        if exit == "Y" or exit == "y":
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("See you!")
+            ok = False
+            loop = False
+        elif exit == "N" or exit == "n":
+            os.system('cls' if os.name == 'nt' else 'clear')
+            ok = False
+            loop = True
+        else:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("Try again!")
+            ok = True
+            
+
+capitols = {
+    "Poland": "Warsaw",
+    "Germany": "Berlin",
+    "Spanish": "Madrid",
+    "France": "Paris",
+    "Austria": "Vien"
+}
+
+loop = True
+while loop == True:
+    country=input("Which country's capital do you want to check? Enter country: ")
+    check_country(country, capitols)
+    exit()
