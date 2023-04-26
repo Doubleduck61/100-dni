@@ -29,7 +29,6 @@ def exit():
             print("Try again!")
             ok = True
             
-
 capitols = {
     "Poland": "Warsaw",
     "Germany": "Berlin",
