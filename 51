@@ -1,0 +1,32 @@
+#niech do d się dodaje jak jest nowe słowo i odejmuje jak sie powtarza
+
+tekst=input("Wprowadzenie textu: ")
+rozdrobnienie=tekst.split()
+lists=[ ]
+lists.extend(rozdrobnienie)
+dlugosc=len(lists)
+print("We wprowadzonym fragmencie jest",dlugosc,"słów.")
+if dlugosc >= 2:
+	a=0
+	b=1
+	c=0
+	d=0
+	while a<dlugosc:
+		if lists[a]==lists[b]:
+			print("To słowo się powtarza!")
+			input()
+			d+=1
+			c=10
+			b+=1
+		while lists[a]!=lists[b]:
+			if b<dlugosc-1:
+				b+=1
+			elif b==dlugosc-1:
+				break
+		a+=1
+		b=0
+		print("a zostalo zwiększone, b wyzerowane")
+if c!=10:
+	print("W tym tekscie są jedynie unikalne wyrazy")
+if c==10:
+	print("Tak de facto tu jest ",d,"słów!")
