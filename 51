@@ -6,25 +6,23 @@ lists=[ ]
 lists.extend(rozdrobnienie)
 dlugosc=len(lists)
 print("We wprowadzonym fragmencie jest",dlugosc,"słów.")
+c=0
 if dlugosc >= 2:
 	a=0
-	b=1
+	b=0
 	c=0
 	d=0
 	while a<dlugosc:
-		if lists[a]==lists[b]:
-			print("To słowo się powtarza!")
-			input()
-			d+=1
-			c=10
-			b+=1
-		while lists[a]!=lists[b]:
-			if b<dlugosc-1:
-				b+=1
-			elif b==dlugosc-1:
-				break
+		while b<dlugosc-1:
+			b += 1
+			if lists[a]==lists[b]:
+				print("To słowo się powtarza!")
+				d -= 1
+				c = 10
+			if lists[a]!=lists[b]:
+				d += 1
 		a+=1
-		b=0
+		b=-1
 		print("a zostalo zwiększone, b wyzerowane")
 if c!=10:
 	print("W tym tekscie są jedynie unikalne wyrazy")
