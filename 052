@@ -1,9 +1,21 @@
 # Narysuj prostokąt o podanych przez użytkownika rozmiarach.
 
-a=int(input("Podaj długośc boku a: "))
-b=int(input("Podaj długośc boku b: "))
-sign=input("Jakiego użyć znaku?:")
+a=int(input("Enter length side a: "))
+b=int(input("Enter length side b: "))
+sign=input("Which sign do you want to use to draw? ")
 i=0
-while i < a:
-    print(b*(sign+" "))
+while i < b:
+    print(a*(sign+" "))
     i+=1
+
+print()
+
+if a >=3 and b >=3:
+    print(a*(sign+" "))
+    i=0
+    while i<b-2:
+        print((sign+" ")+(a-2)*"  "+(sign+" "))
+        i+=1
+    print(a*(sign+" "))
+else:
+    print("You can't create empty rectangle when entered value is less than 3!")
