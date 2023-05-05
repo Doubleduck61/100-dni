@@ -1,0 +1,28 @@
+dict={
+    "ja":"I",
+    "pies":"dog",
+    "kot":"cat",
+    "siostra":"siostra",
+    "brat":"brother",
+    "ryba":"fish",
+    "dom":"house",
+    "telefon":"phone",
+    "komputer":"computer",
+    "kolano":"knee",
+    "mysz":"mouse"
+}
+lists_pl=[]
+lists_eng=[]
+print("Wprowadź zdanie")
+zdanie_pl=input()
+rozdrobnienie=zdanie_pl.split()
+lists_pl.extend(rozdrobnienie)
+dlugosc=len(lists_pl)
+#print(dict)
+
+for a in range(0,dlugosc):
+    lists_eng.append(dict[lists_pl[a]])
+
+for a in (0,dlugosc):
+    print(lists_eng[a-1])
+    a+=1
