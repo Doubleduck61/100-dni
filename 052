@@ -1,0 +1,9 @@
+# Narysuj prostokąt o podanych przez użytkownika rozmiarach.
+
+a=int(input("Podaj długośc boku a: "))
+b=int(input("Podaj długośc boku b: "))
+sign=input("Jakiego użyć znaku?:")
+i=0
+while i < a:
+    print(b*(sign+" "))
+    i+=1
