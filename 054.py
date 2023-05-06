@@ -9,8 +9,7 @@
 def substraction(sentence, sign1, sign2):
     part=""
     for i in range(sign1,sign2):
-        part+= sentence[i]
-    print(part)
+        part += sentence[i]
     return part
     
 print("Enter your sentence: ")
@@ -18,4 +17,5 @@ sentence=input()
 sign1=int(input("Enter number of start sign: "))
 sign2=int(input("Enter number of end sign: "))
 
-substraction(sentence, sign1, sign2)
+part=substraction(sentence, sign1, sign2)
+print(part)
