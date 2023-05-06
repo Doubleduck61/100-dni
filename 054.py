@@ -11,6 +11,7 @@ def substraction(sentence, sign1, sign2):
     for i in range(sign1,sign2):
         part+= sentence[i]
     print(part)
+    return part
     
 print("Enter your sentence: ")
 sentence=input()
