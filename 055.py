@@ -7,6 +7,9 @@ Hasło musi zawierać co najmniej jeden znak specjalny.
 Hasło musi mieć między 10 a 15 znaków.
 Hasło nie może zawierać znaków "mylących", 1, I, O, 0.
 """
+
+#1 SPOSÓB
+
 import random
 import string
 
@@ -56,6 +59,7 @@ print("".join(password))
 
 ######################################
 
+#2 SPOSÓB
 import random
 import string
 
