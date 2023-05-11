@@ -5,8 +5,7 @@ digits = []
 def convert():
     while True:
         sign=input("Enter integer - if you enter letter, you will show a results: ")
-        check = sign.isdigit()
-        if check == True:
+        if sign.isdigit()
             digits.append(sign)
         else:
             break
