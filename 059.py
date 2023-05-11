@@ -1,19 +1,16 @@
 #Zamiana listy na zbiór
 
-digits=[]
+digits = []
 
 def convert():
-    ok=True
-    while ok==True:
-        x=input("Wprowadź liczbę całkowitą: ")
-        check=x.isdigit()
-        if check==True:
-            digits.extend(x)
-            ok=True
+    while True:
+        sign=input("Enter integer - if you enter letter, you will show a results: ")
+        check = sign.isdigit()
+        if check == True:
+            digits.append(sign)
         else:
             break
-    my_set=set(digits)
-    my_list=list(my_set)
+    my_list = list(set(digits))
     return my_list
 
 print(convert())
