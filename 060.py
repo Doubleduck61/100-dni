@@ -1,5 +1,5 @@
 #Przygotuj aplikację która.
-#Będzie miała wbudowany cennik wszystkich produktów.
+#Będzie miała wbudowanyk cennik wszystkich produktów.
 #Przygotuje listę zakupów, złożoną z unikalnych produktów oraz podanej obok liczby produktów do kupienia.
 #Wyliczy wartość zakupów i poda ją w podsumowaniu.
 
