@@ -1,3 +1,9 @@
+"""
+Napisz program, który losuje 5 liczb całkowitych z zakresu od 1 do 10,
+a następnie prosi użytkownika o odgadnięcie co najmniej jednej z tych liczb.
+Program powinien odpowiedzieć, czy podana przez użytkownika liczba była jedną z wylosowanych lub nie.
+"""
+
 import random
 import os
 
