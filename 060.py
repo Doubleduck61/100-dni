@@ -2,7 +2,7 @@
 # Będzie miała wbudowany cennik wszystkich produktów.
 # Przygotuje listę zakupów, złożoną z unikalnych produktów oraz podanej obok liczby produktów do kupienia.
 # Wyliczy wartość zakupów i poda ją w podsumowaniu.\
-
+# złe odwołanie w pętli for. Postaraj się odwołać do elementu i i po tym iterować funkcję for
 price = {
     "jajka": 5,
     "chleb": 2,
