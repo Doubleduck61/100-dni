@@ -19,13 +19,11 @@ def dodawanie():
         if x == "Exit":
             break
         f.write(p+"\n")
-    print("Koniec poleceń!")
     decyzyja(start())
-    return ""
 
 def wyszukiwanie():
     f.close()
-    print("Wyszukiwanie!")
+    os.system('cls' if os.name=='nt' else 'clear')
     g = open(file_path, "r")
     zawartosc = g.readlines()
     produkty = []
@@ -33,7 +31,7 @@ def wyszukiwanie():
         zawartosc[i] = zawartosc[i].replace("\n","")
     for i in zawartosc:
         produkty.append(i) #przypisanie do listy - stworzono podział
-    print(produkty)
+    #print(produkty)
     szukanie=input("Jakiej frazy szukasz? ")
     a=0
     b=0
@@ -43,33 +41,36 @@ def wyszukiwanie():
         while b < len(produkty):
             produkty[b] = produkty[b].replace(" ",",")
             b+=1
-    print(produkty)
+    #print(produkty)
     for i in produkty:
         dodatkowa_lista.extend(i.split(','))
-    print(dodatkowa_lista)
+    #print(dodatkowa_lista)
     while a < len(dodatkowa_lista):
-        if szukanie != dodatkowa_lista[a]:
-            a += 1
+        a += 1
+        if a == len(dodatkowa_lista):
+                print("Nie ma zadania z taką frazą :(")
+                break
+        elif szukanie != dodatkowa_lista[a]:
             if dodatkowa_lista[a] == dodatkowa_lista[a].capitalize():
                 c+=1
         elif szukanie == dodatkowa_lista[a]:
             for i in range(len(produkty)):
                 produkty[c] = produkty[c].replace(","," ")
-            print(produkty[c])
+            print(f"Zadanie któego szukasz to:\n{produkty[c]}")
+            return ""
 
-        if a == len(dodatkowa_lista):
-            print("Nie ma :(")
-
-
+def wyjscie():
+    f.close()
+    print("Do widzenia!")
+    ok = False
+    
 def decyzyja(decyzja):
     if decyzja == 1:
         print(dodawanie())
     elif decyzja == 2:
         print(wyszukiwanie())
     elif decyzja == 3:
-        f.close()
-        print("Do widzenia!")
-        ok = False
+        print(wyjscie())
     else:
         start()
 
