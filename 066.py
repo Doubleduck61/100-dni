@@ -4,8 +4,6 @@ produkty = []
 def otwarcie():
     f = open(file_path, "r")
     zawartosc = f.readlines() #przypisanie zawartości pliku
-    for i in range(0,len(zawartosc)):  
-        zawartosc[i] = zawartosc[i].replace("\n","") #kasujemy \n
     return zawartosc
 
 def stworzenie_slownika(zawartosc, produkty):
