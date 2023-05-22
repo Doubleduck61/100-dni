@@ -15,7 +15,18 @@ def start():
             return decyzja
     else:
         start()
-    
+
+def decyzyja(decyzja):
+    os.system('cls' if os.name=='nt' else 'clear')
+    if decyzja == 1:
+        print(dodawanie())
+    elif decyzja == 2:
+        print(wyszukiwanie())
+    elif decyzja == 3:
+        print(wyjscie())
+    else:
+        start()
+
 def dodawanie():
     while ok==True:
         zadanie = str(input("Podaj zadanie do zrobienia ('Exit' zakończy pętlę): "))
@@ -39,7 +50,7 @@ def wyszukiwanie():
     #print(produkty)
     szukanie=input("Jakiej frazy szukasz? ")
     rozdrobnienie(szukanie, lista_zadan)
-    
+
 def rozdrobnienie(szukanie, lista_zadan):
     a=0
     b=0
@@ -53,7 +64,7 @@ def rozdrobnienie(szukanie, lista_zadan):
     for i in lista_zadan:
         rozdrobniona_lista.extend(i.split(','))
     porównanie_z_bazą_danych(szukanie, lista_zadan, rozdrobniona_lista,a,c)
-    
+
 def porównanie_z_bazą_danych(szukanie, lista_zadan, rozdrobniona_lista,a,c):
     while a < len(rozdrobniona_lista):
         a += 1
@@ -61,7 +72,7 @@ def porównanie_z_bazą_danych(szukanie, lista_zadan, rozdrobniona_lista,a,c):
                 print("Nie ma zadania z taką frazą :(")
                 break
         elif szukanie != rozdrobniona_lista[a]:
-            if rozdrobniona_lista[a] == rozdrobniona_lista[a].capitalize() or rozdrobniona_lista[a].capitalize()==True:
+            if rozdrobniona_lista[a] == rozdrobniona_lista[a].capitalize():
                 c+=1
         elif szukanie == rozdrobniona_lista[a]:
             for i in range(len(lista_zadan)):
@@ -73,16 +84,5 @@ def wyjscie():
     f.close()
     print("Do widzenia!")
     ok = False
-    
-def decyzyja(decyzja):
-    os.system('cls' if os.name=='nt' else 'clear')
-    if decyzja == 1:
-        print(dodawanie())
-    elif decyzja == 2:
-        print(wyszukiwanie())
-    elif decyzja == 3:
-        print(wyjscie())
-    else:
-        start()
 
 print(decyzyja(start()))
