@@ -49,14 +49,14 @@ def rozdrobnienie(szukanie, lista_zadan):
         rozdrobniona_lista.extend(i.split(','))
     porównanie_z_bazą_danych(szukanie, lista_zadan, rozdrobniona_lista,a,c)
     
-def porównanie_z_bazą_danych(szukanie, lista_zadan, rozdrobniona_lista,a,c)
+def porównanie_z_bazą_danych(szukanie, lista_zadan, rozdrobniona_lista,a,c):
     while a < len(rozdrobniona_lista):
         a += 1
         if a == len(rozdrobniona_lista):
                 print("Nie ma zadania z taką frazą :(")
                 break
         elif szukanie != rozdrobniona_lista[a]:
-            if rozdrobniona_lista[a] == rozdrobniona_lista[a].capitalize():
+            if rozdrobniona_lista[a] == rozdrobniona_lista[a].capitalize() or rozdrobniona_lista[a].capitalize()==True:
                 c+=1
         elif szukanie == rozdrobniona_lista[a]:
             for i in range(len(lista_zadan)):
