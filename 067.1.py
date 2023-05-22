@@ -8,8 +8,13 @@ def start():
     print("[1] Dodanie zadania do listy")
     print("[2] Wyszukanie zadania")
     print("[3] Exit")
-    decyzja=int(input("Co chcesz zrobić? [1/2/3]"))
-    return decyzja
+    decyzja=input("Co chcesz zrobić? [1/2/3]")
+    if decyzja.isdigit():
+        decyzja=int(decyzja)
+        if decyzja >= 1 and decyzja <=3:
+            return decyzja
+    else:
+        start()
     
 def dodawanie():
     while ok==True:
