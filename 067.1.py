@@ -1,3 +1,6 @@
+#Wprowadzić daty i róznice miedzy nimi
+
+
 import os
 file_path = "D:\IT\Python\Projekty\qptodo.txt"
 f=open(file_path, "a")
